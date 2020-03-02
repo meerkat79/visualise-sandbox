@@ -1,0 +1,121 @@
+{
+   "nameData":[
+      {
+         "year":2019,
+         "name":"WTT",
+         "scope":"Scope 3",
+         "locationSum":2244.60585391443,
+         "marketSum":2244.60585391443,
+         "marketDiff":null,
+         "locationDiff":null
+      },
+      {
+         "year":2019,
+         "name":"Water",
+         "scope":"Scope 3",
+         "locationSum":0.453648039930832,
+         "marketSum":0.453648039930832,
+         "marketDiff":4461.095459681271,
+         "locationDiff":4461.095459681271
+      },
+      {
+         "year":2019,
+         "name":"Waste",
+         "scope":"Scope 3",
+         "locationSum":157.9024733642,
+         "marketSum":157.9024733642,
+         "marketDiff":null,
+         "locationDiff":null
+      },
+      {
+         "year":2019,
+         "name":"T&D",
+         "scope":"Scope 3",
+         "locationSum":327.668486135918,
+         "marketSum":327.668486135918,
+         "marketDiff":null,
+         "locationDiff":null
+      },
+      {
+         "year":2019,
+         "name":"Taxis",
+         "scope":"Scope 3",
+         "locationSum":24.2742393856,
+         "marketSum":24.2742393856,
+         "marketDiff":null,
+         "locationDiff":null
+      },
+      {
+         "year":2019,
+         "name":"Rail",
+         "scope":"Scope 3",
+         "locationSum":14.9388341031111,
+         "marketSum":14.9388341031111,
+         "marketDiff":null,
+         "locationDiff":null
+      },
+      {
+         "year":2019,
+         "name":"Motorbike",
+         "scope":"Scope 3",
+         "locationSum":2.21618058,
+         "marketSum":2.21618058,
+         "marketDiff":null,
+         "locationDiff":null
+      },
+      {
+         "year":2019,
+         "name":"Flights",
+         "scope":"Scope 3",
+         "locationSum":16.6691317034667,
+         "marketSum":16.6691317034667,
+         "marketDiff":null,
+         "locationDiff":null
+      },
+      {
+         "year":2019,
+         "name":"Cars",
+         "scope":"Scope 3",
+         "locationSum":2927.326433233,
+         "marketSum":2927.326433233,
+         "marketDiff":null,
+         "locationDiff":null
+      },
+      {
+         "year":2019,
+         "name":"Bus",
+         "scope":"Scope 3",
+         "locationSum":1.08711131982222,
+         "marketSum":1.08711131982222,
+         "marketDiff":null,
+         "locationDiff":null
+      },
+      {
+         "year":2019,
+         "name":"Electricity",
+         "scope":"Scope 2",
+         "locationSum":3859.54216849495,
+         "marketSum":5745.82545366082,
+         "marketDiff":2488.241169915391,
+         "locationDiff":1638.5536713717302
+      },
+      {
+         "year":2019,
+         "name":"Natural gas",
+         "scope":"Scope 1",
+         "locationSum":1844.93516339384,
+         "marketSum":1844.93516339384,
+         "marketDiff":51268.71121763333,
+         "locationDiff":51268.71121763333
+      },
+      {
+         "year":2019,
+         "name":"Diesel",
+         "scope":"Scope 1",
+         "locationSum":2945.09800762144,
+         "marketSum":2945.09800762144,
+         "marketDiff":null,
+         "locationDiff":null
+      }
+   ]
+}

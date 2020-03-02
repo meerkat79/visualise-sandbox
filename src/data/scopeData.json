@@ -1,0 +1,45 @@
+{
+   "scopeData":[
+      {
+         "year":2017,
+         "scope_1":"2399.19",
+         "scope_2_location":"222.00",
+         "scope_2_market":"222.00",
+         "scope_3":"0.01"
+      },
+      {
+         "year":2018,
+         "scope_1":"4309.68",
+         "scope_2_location":"6393.75",
+         "scope_2_market":"8278.65",
+         "scope_3":"5902.32"
+      },
+      {
+         "year":2019,
+         "scope_1":"4790.03",
+         "scope_2_location":"3859.54",
+         "scope_2_market":"5745.83",
+         "scope_3":"5717.14"
+      }
+   ],
+   "lyPctChange":{
+      "scope_1":11,
+      "scope_2_location":-40,
+      "scope_2_market":-31,
+      "scope_1_2_location":-19,
+      "scope_1_2_market":-16,
+      "scope_3":-3
+   },
+   "byPctChange":{
+      "scope_1":100,
+      "scope_2_location":1639,
+      "scope_2_market":2488,
+      "scope_1_2_location":230,
+      "scope_1_2_market":302,
+      "scope_3":57171300
+   },
+   "metricIntensity":{
+
+   },
+   "baselineYear":2017
+}
