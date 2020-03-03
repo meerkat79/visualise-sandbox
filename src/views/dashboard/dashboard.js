@@ -3,6 +3,8 @@ import AppNavBar from '../../global/app-nav-bar/app-nav-bar';
 import Footer from '../../global/footer/footer';
 import DrawerMenu from '../../global/drawer-menu/drawer-menu';
 
+import './dashboard.css';
+
 export default class Dashboard extends React.Component {
 
     constructor(props) {
@@ -24,7 +26,7 @@ export default class Dashboard extends React.Component {
             <Fragment>
                 <AppNavBar isDrawOpen={this.handleDrawerState}></AppNavBar>
                 <DrawerMenu open={this.state.showDrawerMenu} isDrawOpen={this.handleDrawerState}></DrawerMenu>
-                <main>
+                <main className="dashboard">
                     <section>
                     <h1>Start</h1>
                     </section>

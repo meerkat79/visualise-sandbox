@@ -9,6 +9,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import BubbleChartIcon from '@material-ui/icons/BubbleChart';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import PieChartIcon from '@material-ui/icons/PieChart';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   list: {
@@ -59,10 +60,12 @@ export default function TemporaryDrawer(props) {
     >
       <List>
         {items.map((text) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{whichIcon(text)}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
+          <Link to={`/${text}`}>
+            <ListItem button key={text}>
+              <ListItemIcon>{whichIcon(text)}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          </Link>
         ))}
       </List>
     </div>
