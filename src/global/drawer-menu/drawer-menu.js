@@ -6,6 +6,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import HomeIcon from '@material-ui/icons/Home';
 import BubbleChartIcon from '@material-ui/icons/BubbleChart';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import PieChartIcon from '@material-ui/icons/PieChart';
@@ -20,16 +21,19 @@ const useStyles = makeStyles({
   },
 });
 
-const items = ['chart1', 'chart2', 'chart3'];
+const items = ['Home', 'Chart1', 'Chart2', 'Chart3'];
 
 const whichIcon = (val) => {
-  if (val === 'chart1') {
+  if(val === 'Home') {
+    return <HomeIcon />
+  }
+  if (val === 'Chart1') {
       return <BarChartIcon />
   }
-  if(val === 'chart2') {
+  if(val === 'Chart2') {
       return <BubbleChartIcon/>
   }
-  if(val === 'chart3') {
+  if(val === 'Chart3') {
       return <PieChartIcon />
   }
 }

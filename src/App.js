@@ -29,7 +29,10 @@ function App() {
         <div className="app">
           <Switch>
             <Route path="/" exact component={Dashboard} />
-            <Route path="/chart1" component={Chart1} />
+            <Route path="/Home" exact component={Dashboard} />
+            <Route path="/Chart1" component={Chart1} />
+            <Route path="/Chart2" component={Error} />
+            <Route path="/Chart3" component={Error} />
             <Route path="/error" component={Error} />
           </Switch>
         </div>

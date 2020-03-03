@@ -52,7 +52,6 @@ export default class Dashboard extends React.Component {
             .then(data => {
             this.setState({scopeData: data.scopeData});
             this.namedDataMarkup(this.state.nameData);
-            console.log(this.state);
             })
       }
 
@@ -69,8 +68,6 @@ export default class Dashboard extends React.Component {
       }
 
     render() {
-        
-        console.log(this.state.showDrawerMenu);
         return(
             <Fragment>
                 <AppNavBar isDrawOpen={this.handleDrawerState}></AppNavBar>
