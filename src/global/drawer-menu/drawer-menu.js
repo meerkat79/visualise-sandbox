@@ -24,17 +24,17 @@ const items = ['chart1', 'chart2', 'chart3'];
 
 const whichIcon = (val) => {
   if (val === 'chart1') {
-      return <BubbleChartIcon />
+      return <BarChartIcon />
   }
   if(val === 'chart2') {
-      return <BarChartIcon />
+      return <BubbleChartIcon/>
   }
   if(val === 'chart3') {
       return <PieChartIcon />
   }
 }
 
-export default function TemporaryDrawer(props) {
+export default function DrawerMenu(props) {
 
   const classes = useStyles();
 
@@ -51,7 +51,7 @@ export default function TemporaryDrawer(props) {
     setState({ ...state, open: val });
   };
 
-  const sideList = side => (
+  const sideList = () => (
     <div
       className={classes.list}
       role="presentation"

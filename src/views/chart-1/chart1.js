@@ -1,6 +1,10 @@
 import React from 'react';
 import * as d3 from 'd3';
 
+import AppNavBar from '../../global/app-nav-bar/app-nav-bar';
+import DrawerMenu from '../../global/drawer-menu/drawer-menu';
+import BarChart from '../bar-chart/bar-chart';
+
 const nameData = './data/nameData.json';
 const scopeData = './data/scopeData.json';
 
@@ -10,31 +14,13 @@ export default class Chart1 extends React.Component {
     super(props)
   
     this.state = {
-      initialBooks:[
-        {
-            name: "Harry Potter and the Philosophers Stone",
-            author: "J. K. Rowling",
-            genre: "fantasy"
-        },{
-            name: "The Pedagogy of Freedom",
-            author: "Bell hooks",
-            genre: "non-fiction"
-        },{
-            name: "Harry Potter and the Chamber of Secrets",
-            author: "J. K. Rowling",
-            genre: "fantasy"
-        },{
-            name: "Gilgamesh",
-            author: "Derrek Hines",
-            genre: "poetry"
-        }
-    ],
     nameData: [],
-    scopeData: []
+    scopeData: [],
+    temperatureData: [ 8, 5, 13, 9, 12 ]
     }
   }
 
-  getData = () => {
+  fetchData = () => {
     // first get name data
     fetch(nameData)
       .then(res => {
@@ -57,19 +43,30 @@ export default class Chart1 extends React.Component {
 
   componentDidMount() {
 
-    d3.selectAll("p").style("color", "blue");
-    d3.select(this.refs.test).style("background-color", "blue");
+    // d3.selectAll("p").style("color", "blue");
+    // d3.select(this.refs.chart).style("background-color", "blue");
 
-    this.getData();
+    d3.select(this.refs.chart)
+      .selectAll('li')
+      .data(this.state.temperatureData)
+      .enter()
+        .append('li')
+        .text((dataPoint)=>{
+          return dataPoint + ' degrees'
+        })
+
+    this.fetchData();
 
   }
 
   render () {
     return (
       <div>
+        <AppNavBar isDrawOpen={this.handleDrawerState}></AppNavBar>
+        <DrawerMenu open={this.state.showDrawerMenu} isDrawOpen={this.handleDrawerState}></DrawerMenu>
         <h1>Playing With React and D3</h1>
-        <p>test</p>
-        <div ref="test">foo bar</div>
+        <p>Test Chart</p>
+        <BarChart />
       </div>
     )
   }
