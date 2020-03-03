@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
+import './main.css';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Dashboard from './views/dashboard/dashboard';
+import Chart1 from './views/chart-1/chart1';
 import Error from './views/error/error';
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -15,6 +17,10 @@ const theme = createMuiTheme({
   }
 });
 
+const mountingPoint = document.createElement('div');
+mountingPoint.className = 'react-app';
+document.body.appendChild(mountingPoint);
+
 function App() {
 
   return (
@@ -23,6 +29,7 @@ function App() {
         <div className="app">
           <Switch>
             <Route path="/" exact component={Dashboard} />
+            <Route path="/chart1" component={Chart1} />
             <Route path="/error" component={Error} />
           </Switch>
         </div>

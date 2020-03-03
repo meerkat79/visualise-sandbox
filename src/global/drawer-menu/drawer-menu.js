@@ -20,16 +20,16 @@ const useStyles = makeStyles({
   },
 });
 
-const items = ['graph1', 'graph2', 'graph3'];
+const items = ['chart1', 'chart2', 'chart3'];
 
 const whichIcon = (val) => {
-  if (val === 'graph1') {
+  if (val === 'chart1') {
       return <BubbleChartIcon />
   }
-  if(val === 'graph2') {
+  if(val === 'chart2') {
       return <BarChartIcon />
   }
-  if(val === 'graph3') {
+  if(val === 'chart3') {
       return <PieChartIcon />
   }
 }
@@ -59,9 +59,9 @@ export default function TemporaryDrawer(props) {
       onKeyDown={handleDrawerToggle(false)}
     >
       <List>
-        {items.map((text) => (
-          <Link to={`/${text}`}>
-            <ListItem button key={text}>
+        {items.map((text, index) => (
+          <Link to={`/${text}`} key={index}>
+            <ListItem button>
               <ListItemIcon>{whichIcon(text)}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
