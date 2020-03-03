@@ -20,8 +20,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function AppNavBar(props) {
+
   const handleDrawerToggle = () => {
-    console.log('send value to dashboard');
+    console.log('send value to dashboard from app navbar');
+    
     props.isDrawOpen(true)
   }
 

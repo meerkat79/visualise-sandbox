@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import Dashboard from './views/dashboard/dashboard';
-import Footer from './global/footer/footer';
+import Error from './views/error/error';
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
@@ -17,10 +19,14 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-    <div className="app">
-      <Dashboard></Dashboard>
-      <Footer></Footer>
-    </div>
+      <Router>
+        <div className="app">
+          <Switch>
+            <Route path="/" exact component={Dashboard} />
+            <Route path="/error" component={Error} />
+          </Switch>
+        </div>
+      </Router>
     </ThemeProvider>
   );
 }

@@ -33,18 +33,20 @@ const whichIcon = (val) => {
   }
 }
 
-export default function TemporaryDrawer() {
+export default function TemporaryDrawer(props) {
 
   const classes = useStyles();
+
   const [state, setState] = React.useState({
-    open: false
+    open: props.open
   });
 
-  const toggleDrawer = (val) => event => {
+  const handleDrawerToggle = (val) => event => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
+    
+    props.isDrawOpen(props.open ? false: true)
     setState({ ...state, open: val });
   };
 
@@ -52,8 +54,8 @@ export default function TemporaryDrawer() {
     <div
       className={classes.list}
       role="presentation"
-      onClick={toggleDrawer(side, false)}
-      onKeyDown={toggleDrawer(side, false)}
+      onClick={handleDrawerToggle(false)}
+      onKeyDown={handleDrawerToggle(false)}
     >
       <List>
         {items.map((text) => (
@@ -68,8 +70,8 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>Open</Button>
-      <Drawer open={state.open} onClose={toggleDrawer(false)}>
+      <Button onClick={handleDrawerToggle(true)}>Open</Button>
+      <Drawer open={state.open} onClose={handleDrawerToggle(false)}>
         {sideList()}
       </Drawer>
     </div>
